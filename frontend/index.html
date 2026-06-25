@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Cantina — Restaurante</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">La Cantina</span>
+    <ul class="nav-links">
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Abierto de Lunes a Domingo</p>
+      <h1>Sabor que<br>enamora</h1>
+      <p class="hero-desc">Cocina tradicional argentina con el toque de siempre. Ingredientes frescos, recetas de familia.</p>
+      <a href="#menu" class="btn btn-primary">Ver el menú</a>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="section" id="menu">
+    <div class="container">
+      <span class="section-label">Lo que ofrecemos</span>
+      <h2 class="section-title">Nuestro menú</h2>
+
+      <!-- Categorías -->
+      <div class="categorias" id="categorias">
+        <button class="cat-btn active" data-id="all">Todo</button>
+      </div>
+
+      <!-- Productos -->
+      <div class="productos-grid" id="productos">
+        <div class="loading">Cargando menú...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section section-dark" id="nosotros">
+    <div class="container nosotros-grid">
+      <div>
+        <span class="section-label section-label--light">Nuestra historia</span>
+        <h2 class="section-title section-title--light">Más de 20 años<br>en la mesa</h2>
+        <p class="nosotros-text">Desde 2004 recibimos a nuestros clientes con la misma calidez de siempre. Una propuesta simple: buena comida, buen ambiente y buen servicio.</p>
+        <p class="nosotros-text">Trabajamos con productores locales para garantizar la frescura de cada plato que sale de nuestra cocina.</p>
+      </div>
+      <div class="nosotros-stats">
+        <div class="nstat"><span>20+</span><p>Años de experiencia</p></div>
+        <div class="nstat"><span>50+</span><p>Platos en el menú</p></div>
+        <div class="nstat"><span>★ 4.8</span><p>Calificación promedio</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container contacto-grid">
+      <div>
+        <span class="section-label">Dónde estamos</span>
+        <h2 class="section-title">Visitanos</h2>
+        <div class="info-item"><i class="ti ti-map-pin"></i><p>Av. Siempreviva 742, Hurlingham</p></div>
+        <div class="info-item"><i class="ti ti-clock"></i><p>Lun–Dom: 12:00 a 15:00 y 20:00 a 24:00</p></div>
+        <div class="info-item"><i class="ti ti-phone"></i><p>+54 11 1234-5678</p></div>
+        <div class="info-item"><i class="ti ti-brand-whatsapp"></i><p>Reservas por WhatsApp</p></div>
+      </div>
+      <div class="mapa-placeholder">
+        <i class="ti ti-map"></i>
+        <p>Google Maps</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 La Cantina · Hecho con <i class="ti ti-heart"></i> en Hurlingham</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- CARRITO -->
+<div class="carrito-overlay" id="carritoOverlay" onclick="toggleCarrito()"></div>
+<div class="carrito-panel" id="carritoPanel">
+  <div class="carrito-header">
+    <h3>Tu pedido</h3>
+    <button onclick="toggleCarrito()">✕</button>
+  </div>
+  <div class="carrito-items" id="carrito-items">
+    <p class="carrito-vacio">Tu carrito está vacío</p>
+  </div>
+  <div class="carrito-footer">
+    <div class="carrito-total-row">
+      <span>Total</span>
+      <span id="carrito-total">$0</span>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="confirmarPedido()">Confirmar pedido</button>
+  </div>
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+<button class="btn-carrito" onclick="toggleCarrito()">
+  🛒 <span id="carrito-count">0</span>
+</button>
+</body>
+</html>
